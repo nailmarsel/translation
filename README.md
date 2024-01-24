@@ -1,4 +1,4 @@
-'''
+```
 from transformers import (
     AutoConfig,
     AutoModelForSeq2SeqLM,
@@ -28,4 +28,4 @@ def inference(sent, source_lang, model, tokenizer):
         **inputs, forced_bos_token_id=tokenizer[source_lang].lang_code_to_id["tat_Cyrl" if source_lang == "rus" else "rus_Cyrl"], max_length=2048, num_beams=8
     )
     return tokenizer[source_lang].batch_decode(translated_tokens, skip_special_tokens=True)[0]
-'''
+```
