@@ -1,4 +1,5 @@
 <h1>Quickstart: Run Inference</h1>
+For this code, you need to install transformers==4.28.1
 
 ```
 from transformers import (
