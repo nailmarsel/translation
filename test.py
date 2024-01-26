@@ -7,10 +7,10 @@ from transformers import (
 def load_model():
     tokenizer = {}
     model = {}
-    tokenizer["tat"] = AutoTokenizer.from_pretrained(pretrained_model_name_or_path="/home/ips/projects/translation/models/nllb-200-distilled-600M_ru_tat_900k_vanilla_rais3/checkpoint-250000", src_lang="tat_Cyrl")
-    tokenizer["rus"] = AutoTokenizer.from_pretrained(pretrained_model_name_or_path="/home/ips/projects/translation/models/nllb-200-distilled-600M_ru_tat_900k_vanilla_rais3/checkpoint-250000", src_lang="rus_Cyrl")
-    model["tat"] = AutoModelForSeq2SeqLM.from_pretrained(pretrained_model_name_or_path="/home/ips/projects/translation/models/nllb-200-distilled-600M_ru_tat_900k_vanilla_rais3_rus/checkpoint-50000").to('cuda:7')
-    model["rus"] = AutoModelForSeq2SeqLM.from_pretrained(pretrained_model_name_or_path="/home/ips/projects/translation/models/nllb-200-distilled-600M_ru_tat_900k_vanilla_rais3/checkpoint-250000").to('cuda:7')
+    tokenizer["tat"] = AutoTokenizer.from_pretrained(pretrained_model_name_or_path="IPSAN/nllb-200-600M-from-rus-to-tat",src_lang="tat_Cyrl")
+    tokenizer["rus"] = AutoTokenizer.from_pretrained(pretrained_model_name_or_path="IPSAN/nllb-200-600M-from-tat-to-rus", src_lang="rus_Cyrl")
+    model["tat"] = AutoModelForSeq2SeqLM.from_pretrained(pretrained_model_name_or_path="IPSAN/nllb-200-600M-from-rus-to-tat").to('cuda:0')
+    model["rus"] = AutoModelForSeq2SeqLM.from_pretrained(pretrained_model_name_or_path="IPSAN/nllb-200-600M-from-tat-to-rus").to('cuda:0')
     
     
 
