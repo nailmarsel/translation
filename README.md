@@ -1,4 +1,4 @@
-Quickstart: Run Inference
+<h3>Quickstart: Run Inference</h3>
 
 ```
 from transformers import (
